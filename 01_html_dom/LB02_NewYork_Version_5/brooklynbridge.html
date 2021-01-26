@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> New York City </title>
+    <!-- Link zum CSS-Framework Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css" type="text/css"/>    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="bilder/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html"> <img src="bilder/ilnyc.svg" alt="I Love NYC" width="100" height="100"></a>
+
+        <!-- Main Navigation -->
+        <nav id="mainNav">
+            <ul>
+                <li> <a href="gallery.html">Galerie</a> </li>
+                <li> <a href="geschichte.html" target="_self">Geschichte</a> </li>
+                <li> <a href="eigeneerfahrungen.html" target="_self">Eigene Erfahrungen</a> </li>
+                <li> <a href="index.html" target="_self">Home </a> </li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon, &#9776; stellt den Hamburger (☰) dar, ist im CSS mit "display:none" ausgeblendet  -->
+        <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+
+        <!-- Hamburger Navigation mit einem Close-Button (x), ist im CSS mit "width:0" ausgeblendet  -->
+        <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a> <!--  &times; stellt das X dar -->
+            <ul>
+                <li> <a href="gallery.html">Galerie</a> </li>
+                <li><a href="geschichte.html">Geschichte</a></li>
+                <li><a href="eigeneerfahrungen.html">Eigene Erfahrungen </a></li>
+                <li> <a href="index.html">Home </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h1>Brooklyn Bridge</h1>
+        <section>
+            <article class="textfürsehenswürdigkeitbeieigeneerfahrungen">
+                An dem Tag als ich die Brooklyn Bridge besuchte stand mir viel Zeit zur Verfügung. Nach einem
+                wunderbaren Rundgang im südlichen Stadtteil von New York überquerte ich die beeindruckende Brücke. Ich
+                ging auf dem Fussgängerweg welcher parallel zum Veloweg angesetzt war. Unterhalb führte eine Autostrasse
+                hindurch, wo die vielen interessanten Fahrzeuge New Yorks täglich zu tausenden hindurchfahren.
+                Es war ein unbeschreibliches Gefühl auf einer der bekanntesten Brücke der Welt zu spazieren. Ab und zu
+                begegneten mir lustige Polizei Fahrzeuge und ständig wurde ich von Velos überholt. Ich war auf dem Weg
+                in Richtung Brooklyn. Hinter mir lag Manhattan und ich sah die vielen Silhouetten der gigantischen
+                Wolkenkratzer. Die Atmosphäre geniessend bewegte ich mich somit über den East River, der kein Fluss,
+                sondern ein Meeresarm mit starken gezeitenabhängigen Strömungen und dichtem Schiffsverkehr ist. Immer
+                wieder begrüssten mich Leute, die kleine Souvenirs verkauften oder, die Kunstbilder von den Touristen
+                zeichnen.
+                In Brooklyn angekommen war ich von dieser Überquerung beeindruckt.
+
+
+            </article>
+        </section>
+        <br>
+
+        <section>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary"><a class="group" href="empirestatebuilding.html">Letzte Seite</a></button>
+                <button type="button" class="btn btn-secondary"><a class="group" href="eigeneerfahrungen.html">Übersicht Erfahrungen</a></button>
+                <button type="button" class="btn btn-secondary"><a class="group" href="freiheitsstatue.html">Nächste Seite</a></button>
+              </div>
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        Leistungsbeurteilung 02, Modul 287; ME19c <br>
+        Probst Noemi, Petrone Davide
+    </footer>
+
+
+    <!-- Java Script Funktion. 
+		Die Funktion "openNav()" wird ausgeführt, wenn man auf den Hamburger (☰) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 100%.
+		Die Funktion "closeNav()" wird ausgeführt, wenn man auf das Close-Icon (x) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 0%.
+	-->
+    <script>
+        function openNav() {
+            document.getElementById("hamburgerNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("hamburgerNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>

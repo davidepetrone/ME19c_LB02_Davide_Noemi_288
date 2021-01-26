@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> New York City </title>
+    <!-- Link zum CSS-Framework Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="bilder/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html"> <img src="bilder/ilnyc.svg" alt="I Love NYC" width="100" height="100"></a>
+
+        <!-- Main Navigation -->
+        <nav id="mainNav">
+            <ul>
+                <li> <a href="gallery.html">Galerie </a> </li>
+                <li> <a href="geschichte.html" target="_self">Geschichte</a> </li>
+                <li> <a href="eigeneerfahrungen.html" target="_self">Eigene Erfahrungen</a> </li>
+                <li> <a href="index.html" target="_self">Home </a> </li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon, &#9776; stellt den Hamburger (☰) dar, ist im CSS mit "display:none" ausgeblendet  -->
+        <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+
+        <!-- Hamburger Navigation mit einem Close-Button (x), ist im CSS mit "width:0" ausgeblendet  -->
+        <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a> <!--  &times; stellt das X dar -->
+            <ul>
+                <li> <a href="gallery.html">Galerie </a> </li>
+                <li><a href="geschichte.html">Geschichte</a></li>
+                <li><a href="eigeneerfahrungen.html">Eigene Erfahrungen </a></li>
+                <li> <a href="index.html">Home </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h1>New York Police Departement</h1>
+        <section>
+            <article class="textfürsehenswürdigkeitbeieigeneerfahrungen">
+                Was mich auch absolut fasziniert hat, war die Polizei in New York. Da mein Vater in Zürich bei einer
+                Spezialeinheit arbeitet, kenne ich mich in dieser Thematik ein wenig aus. Aber in Amerika erlebte ich
+                die Welt der Polizei auf eine andere Art. Jeden Tag sah ich ungefähr alle 2 Minuten einen Streifenwagen
+                und etwa alle 7 Minuten hörte ich eine Sirene. Dazu habe ich an einem Abend ein kurzes Video gemacht.
+                Leider ist dieses das einzige Video, welches ich in diesen Ferien produziert habe. Ich habe mich dafür
+                auch die Fotografie fokussiert. Zusätzlich zu der Polizei sah ich auch jeden Tag die Ambulanz und oft
+                auch riesige Feuerwehrwagen. Was mich fasziniert hat, war, dass in der Stadt unzählig viele Polizei Auto
+                Modelle zu sehen waren. Hier sind ein paar Fotos, welche ich von verschiedenen Wagen gemacht habe.
+                Zusätzlich habe ich auch andere Fahrzeuge, welche mit NYPD (New York Police Departement) beschriftet
+                waren fotografiert. An einem Tag hatte ich sogar die Gelegenheit mit meinem Vater in einer der drei
+                Hauptpolizeiwachen von Manhattan einen kleinen Rundgang zu machen. Ich durfte einige Materialien
+                besichtigen, anprobieren und fotografieren. Anschliessend habe ich ein Andenken (ein T-Shirt) von ihrem
+                kleinen offiziellen Shop gekauft.
+
+
+            </article>
+        </section>
+        <br>
+        <section>
+
+            <video src="videos/police.MOV" controls> Ihr Browser kann dieses Video leider nicht wiedergeben.</video>
+
+        </section>
+        <br>
+
+        <section>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary"><a class="group" href="freiheitsstatue.html">Letzte
+                        Seite</a></button>
+                <button type="button" class="btn btn-secondary"><a class="group" href="eigeneerfahrungen.html">Übersicht
+                        Erfahrungen</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Leistungsbeurteilung 02, Modul 287; ME19c <br>
+        Probst Noemi, Petrone Davide
+    </footer>
+
+
+    <!-- Java Script Funktion. 
+		Die Funktion "openNav()" wird ausgeführt, wenn man auf den Hamburger (☰) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 100%.
+		Die Funktion "closeNav()" wird ausgeführt, wenn man auf das Close-Icon (x) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 0%.
+	-->
+    <script>
+        function openNav() {
+            document.getElementById("hamburgerNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("hamburgerNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>

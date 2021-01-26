@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> New York City </title>
+    <!-- Link zum CSS-Framework Bootstrap-->
+    <link rel="stylesheet" href="bootstrap.css" type="text/css"/>   
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="bilder/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html"> <img src="bilder/ilnyc.svg" alt="I Love NYC" width="100" height="100"></a>
+
+        <!-- Main Navigation -->
+        <nav id="mainNav">
+            <ul>
+                <li> <a href="gallery.html">Galerie</a> </li>
+                <li> <a href="geschichte.html" target="_self">Geschichte</a> </li>
+                <li> <a href="eigeneerfahrungen.html" target="_self">Eigene Erfahrungen</a> </li>
+                <li> <a href="index.html" target="_self">Home </a> </li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon, &#9776; stellt den Hamburger (☰) dar, ist im CSS mit "display:none" ausgeblendet  -->
+        <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+
+        <!-- Hamburger Navigation mit einem Close-Button (x), ist im CSS mit "width:0" ausgeblendet  -->
+        <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a> <!--  &times; stellt das X dar -->
+            <ul>
+                <li> <a href="gallery.html">Galerie</a> </li>
+                <li><a href="geschichte.html">Geschichte</a></li>
+                <li><a href="eigeneerfahrungen.html">Eigene Erfahrungen </a></li>
+                <li> <a href="index.html">Home </a> </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h1>Freiheitsstatue</h1>
+        <section>
+            <article class="textfürsehenswürdigkeitbeieigeneerfahrungen">
+                Wenn man von New York spricht und über alle Sehenswürdigkeiten schwärmt darf man natürlich die
+                Freiheitsstatue nicht vergessen. Sie steht auf Liberty Island im New Yorker Hafen und wurde am 28.
+                Oktober 1886 eingeweiht. Die Statue war ein Geschenk des französischen Volkes an die Vereinigten
+                Staaten. Als ich in New York war hatte ich die Gelegenheit auf eine Schifftour auf dem Hudson River und
+                anschliessen auf dem East River zu gehen. Vom Schiff aus konnte ich unzählige Phänomene der Grossstadt
+                besichtigen. Z.B. die riesigen Wolkenkratzer auf der Uferseite von New Jersey, die unglaubliche Skyline,
+                von Manhattan oder Alice Island mit einem speziellen Gebäude darauf. Anschliessend sah ich die
+                Freiheitsstatue. Von weitem sah sie gar nicht so imposant aus. Je näher ich jedoch zu ihr kam, desto
+                grösser und erstaunlicher wurde sie. Ihre Farbe war speziell. Ich hatte die Gelegenheit schöne Fotos zu
+                machen, in welchen die Statue prachtvoll dasteht. Ich probierte auch Bilder zu machen, in welchen man im
+                Hintergrund einige Wolkenkratzer sehen kann, doch dies war nicht sehr einfach. Die Freiheitsstatue hat
+                nämlich nicht diese Position, die oft auf Bildern oder Filmen gezeigt wird. Dieses Erlebnis hat mir sehr
+                gefallen und ich kann es nur weiterempfehlen. Der Preis der Schifffahrt war angemessen und während dem
+                Rundgang bekam ich laufend allgemeine und geschichtliche Informationen eines unterhaltsamen «Speakers».
+
+
+            </article>
+        </section>
+        <br>
+
+        <section>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary"><a class="group" href="brooklynbridge.html">Letzte Seite</a></button>
+                <button type="button" class="btn btn-secondary"><a class="group" href="eigeneerfahrungen.html">Übersicht Erfahrungen</a></button>
+                <button type="button" class="btn btn-secondary"><a class="group" href="police.html">Nächste Seite</a></button>
+              </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer>
+        Leistungsbeurteilung 02, Modul 287; ME19c <br>
+        Probst Noemi, Petrone Davide
+    </footer>
+
+
+    <!-- Java Script Funktion. 
+		Die Funktion "openNav()" wird ausgeführt, wenn man auf den Hamburger (☰) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 100%.
+		Die Funktion "closeNav()" wird ausgeführt, wenn man auf das Close-Icon (x) klickt, die Funktion verändert die Breite von der id "#hamburgernav" im CSS auf 0%.
+	-->
+    <script>
+        function openNav() {
+            document.getElementById("hamburgerNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("hamburgerNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>

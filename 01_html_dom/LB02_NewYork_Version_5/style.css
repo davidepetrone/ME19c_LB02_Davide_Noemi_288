@@ -1,0 +1,423 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+main h1 {
+  font-family: 'Roboto', sans-serif;
+  /* Vorher war es: 'Times New Roman', Times, serif; */
+}
+
+
+/* Header-Container */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  padding: 10px 60px;
+  background-color: rgb(27, 24, 24);
+}
+
+header>a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 6em;
+  line-height: 1em;
+}
+
+/* Main Navigation */
+#mainNav li {
+  display: inline;
+  margin: 0 0 0 20px;
+}
+
+#mainNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#mainNav a:hover {
+  color: brown;
+}
+
+/* Hamburger Icon */
+#hamburgerIcon {
+  display: none;
+  /* Das Icon wird nicht angezeigt */
+  font-size: 3em;
+  cursor: pointer;
+}
+
+/* Hamburger Navigation */
+#hamburgerNav {
+  position: fixed;
+  height: 100%;
+  width: 0;
+  /* Hat eine Breite von 0, wird also nicht angezeigt */
+  top: 0;
+  left: 0;
+  padding-top: 110px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#hamburgerNav .closebtn {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  font-size: 60px;
+}
+
+#hamburgerNav a {
+  display: block;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  transition: 0.3s;
+}
+
+#hamburgerNav a:hover {
+  color: #f1f1f1;
+}
+
+/* Main-Container */
+/* height vorher: 85vh; */
+main {
+  height: 100%;
+  padding-top: 100px;
+  background-color: rgb(27, 35, 48);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+main section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main h1 {
+  font-size: 3em;
+  margin: 50px 0;
+  text-transform: uppercase;
+
+}
+
+main article {
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(27, 24, 24);
+  border-radius: 18px;
+}
+
+main article h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+main article img {
+  width: 100%;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+main article img:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
+}
+
+main article p {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.textfürsehenswürdigkeitbeieigeneerfahrungen {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(27, 24, 24);
+  text-align: justify;
+
+}
+
+.home {
+  width: 75%;
+  background-color: transparent;
+}
+
+.home p {
+  text-align: center;
+}
+
+main video {
+  width: 800px;
+  text-align: center;
+}
+
+/* Footer-Container */
+footer {
+  padding: 20px;
+  background-color: rgb(27, 24, 24);
+}
+
+
+/* CSS Regeln verändern sich, wenn der Bilschirm kleiner als 700px in der Breite ist: 
+   Die Main-Navigation wird ausgeblendet und das Hamburger-Icon eingeblendet. */
+@media screen and (max-width: 700px) {
+  #mainNav {
+    display: none;
+  }
+
+  #hamburgerIcon {
+    display: block;
+  }
+}
+
+/*Start
+Styling der Seite "Geschichte"*/
+/*div.vergleich {
+  height: 100px;
+}*/
+/*Quellenangabe auf der Seite "Geschichte" */
+a.quelle {
+  color: brown;
+}
+
+article.entstehung {
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 800px;
+}
+
+/*Ende
+Styling der Seite "Geschichte"*/
+
+
+/* Start 
+Styling für die Bilder auf der Seite von World Trade Center */
+
+#thumbnail {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 600px;
+  /* Tatsächliche Bildhöhe */
+  float: left;
+  /* Bilder in Vollansicht daneben */
+  overflow: auto;
+  /* Scrollbalken bei Bedarf */
+  background-color: rgb(27, 24, 24);
+}
+
+#thumnail li {
+  list-style: none;
+  /*Liste ohne Punkte zeigen*/
+}
+
+#thumbnail a {
+  display: block;
+  color: white;
+  /* Für Alternativtext */
+  background-color: rgb(27, 24, 24);
+  width: 188px;
+  padding: 6px;
+  text-align: center;
+}
+
+#thumbnail li a:hover {
+  background-color: silver;
+}
+
+#thumbnail img {
+  border: 1px solid white;
+}
+
+#fullframe {
+  margin: 0;
+  padding: 0;
+  margin-left: 220px;
+  /* Platz für die Navigation freilassen */
+  width: 802px;
+  /* Anzeigebreite des Bildes */
+  height: 602px;
+  /* Anzeigehöhe des Bildes */
+  overflow: hidden;
+  /* Nur ein Bild anzeigen */
+  background-color: rgb(27, 24, 24);
+}
+
+#fullframe li {
+  list-style: none;
+  /*Liste ohne Punkte zeigen*/
+}
+
+#fullframe li a {
+  display: block;
+}
+
+#fullframe li img {
+  display: block;
+  margin: 0 auto;
+  /* Zentrieren */
+  border: 1px solid white;
+}
+
+/* Ende
+ Styling für die Bilder auf der Seite von World Trade Center */
+
+/* Start
+ Styling der verschiedenen Seiten unter eigene Erfahrung*/
+
+.group {
+  text-decoration: none;
+  color: white;
+}
+
+.group:hover {
+  text-decoration: none;
+  color: white;
+}
+
+/* Ende
+ Styling der verschiedenen Seiten unter eigene Erfahrung*/
+
+
+
+
+/* Start
+ Styling Diashow-Gallerie */
+
+
+/* Anpassung 3 Bildergalerie */
+.buttons {
+  display: flex;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  justify-content: center;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgb(27, 24, 24);
+}
+
+
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: rgb(27, 24, 24);
+  padding: 2px 16px;
+  color: white;
+}
+
+
+.row {
+  width: 100%;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Six columns side by side */
+.column {
+  width: 16.66%;
+  float: left;
+}
+
+/* Anpassung 2 Bildergalerie */
+.demo {
+
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.active,
+.demo:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
+}
+
+/* Ende
+Styling für die Bilder auf der Seite von World Trade Center */
+
+/*
+main article img {
+  width: 100%;
+  margin-bottom: 15px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+main article img:hover {
+  filter: grayscale(0);
+  transition: 0.3s;
+}*/
+
+/*opacity: 0.6;
+ opacity: 1;*/

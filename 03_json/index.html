@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>LB02 </title>
+        <style>
+            h1{ 
+                text-align: center; 
+                color: #444; 
+                font-family: 'Trebuchet MS';
+                margin: 60px auto; 
+            }
+        </style>
+    </head>
+    <body>
+       
+        <h1>3. Verarbeitet Daten im JSON-Format</h1>
+        
+        <button onclick="show()">Show Information</button>
+        <p id=information></p>
+    </body>    
+       
+    <script > 
+
+        const agegroup = [
+            "12-17", "18-20", "20-30", "31-50", "51-70"
+        ];
+
+        var userOne = {
+            "email": "max@muster.com",
+            "firstname": "Max",
+            "lastname": "Muster",
+            "age": agegroup[2]
+        };
+        
+        function show(){
+        let information = document.getElementById("information");
+        information.innerHTML = 
+            `Email: ${userOne.email}<br>`+
+            `Vorname: ${userOne.firstname}<br>`+
+            `Nachname: ${userOne.lastname}<br>`+
+            `Altersklasse: ${userOne.age}<br>`;
+        };
+            
+    </script>
+</html>
